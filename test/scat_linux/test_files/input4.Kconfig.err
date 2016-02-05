@@ -1,0 +1,14 @@
+config FOO
+  prompt "This is a multiline \
+          definition that should be put together"
+  bool
+
+config BAR
+  prompt "Bar feature # this is not a comment"
+  bool
+
+config ZZZ
+  bool
+
+comment "Just a comment that should not be ignored (part of Kconfig) \
+         and spanning multiple lines"

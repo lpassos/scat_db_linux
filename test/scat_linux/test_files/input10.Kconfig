@@ -1,0 +1,52 @@
+config DYNAMIC_DEBUG
+	bool "Enable dynamic printk() support"
+	default n
+	depends on PRINTK
+	depends on DEBUG_FS
+	help
+	  Compiles debug level messages into the kernel, which would not
+	  otherwise be available at runtime. These messages can then be
+	  enabled/disabled based on various levels of scope - per source file,
+	  function, module, format string, and line number. This mechanism
+	  implicitly compiles in all pr_debug() and dev_dbg() calls, which
+	  enlarges the kernel text size by about 2%.
+	  If a source file is compiled with DEBUG flag set, any
+	  pr_debug() calls in it are enabled by default, but can be
+	  disabled at runtime as below.  Note that DEBUG flag is
+	  turned on by many CONFIG_*DEBUG* options.
+	  Usage:
+	  Dynamic debugging is controlled via the 'dynamic_debug/control' file,
+	  which is contained in the 'debugfs' filesystem. Thus, the debugfs
+	  filesystem must first be mounted before making use of this feature.
+	  We refer the control file as: <debugfs>/dynamic_debug/control. This
+	  file contains a list of the debug statements that can be enabled. The
+	  format for each line of the file is:
+		filename:lineno [module]function flags format
+	  filename : source file of the debug statement
+	  lineno : line number of the debug statement
+	  module : module that contains the debug statement
+	  function : function that contains the debug statement
+          flags : '=p' means the line is turned 'on' for printing
+          format : the format used for the debug statement
+	  From a live system:
+		nullarbor:~ 
+		fs/aio.c:222 [aio]__put_ioctx =_ "__put_ioctx:\040freeing\040%p\012"
+		fs/aio.c:248 [aio]ioctx_alloc =_ "ENOMEM:\040nr_events\040too\040high\012"
+		fs/aio.c:1770 [aio]sys_io_cancel =_ "calling\040cancel\012"
+	  Example usage:
+		// enable the message at line 1603 of file svcsock.c
+		nullarbor:~ 
+						<debugfs>/dynamic_debug/control
+		// enable all the messages in file svcsock.c
+		nullarbor:~ 
+						<debugfs>/dynamic_debug/control
+		// enable all the messages in the NFS server module
+		nullarbor:~ 
+						<debugfs>/dynamic_debug/control
+		// enable all 12 messages in the function svc_process()
+		nullarbor:~ 
+						<debugfs>/dynamic_debug/control
+		// disable all 12 messages in the function svc_process()
+		nullarbor:~ 
+						<debugfs>/dynamic_debug/control
+	  See Documentation/dynamic-debug-howto.txt for additional information.

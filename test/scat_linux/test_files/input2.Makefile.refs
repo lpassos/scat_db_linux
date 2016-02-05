@@ -1,0 +1,26 @@
+1;DYNAMIC_FTRACE;ifdef CONFIG_DYNAMIC_FTRACE
+6;ACPI;obj-$(CONFIG_ACPI)		+= acpi.o acpi-ext.o
+7;IA64_BRL_EMU;obj-$(CONFIG_IA64_BRL_EMU)	+= brl_emu.o
+8;IA64_PALINFO;obj-$(CONFIG_IA64_PALINFO)	+= palinfo.o
+9;IOSAPIC;obj-$(CONFIG_IOSAPIC)		+= iosapic.o
+10;MODULES;obj-$(CONFIG_MODULES)		+= module.o
+11;SMP;obj-$(CONFIG_SMP)		+= smp.o smpboot.o
+12;NUMA;obj-$(CONFIG_NUMA)		+= numa.o
+13;PERFMON;obj-$(CONFIG_PERFMON)		+= perfmon_default_smpl.o
+14;IA64_CYCLONE;obj-$(CONFIG_IA64_CYCLONE)	+= cyclone.o
+15;IA64_MCA_RECOVERY;obj-$(CONFIG_IA64_MCA_RECOVERY)	+= mca_recovery.o
+16;KPROBES;obj-$(CONFIG_KPROBES)		+= kprobes.o jprobes.o
+17;DYNAMIC_FTRACE;obj-$(CONFIG_DYNAMIC_FTRACE)	+= ftrace.o
+18;KEXEC;obj-$(CONFIG_KEXEC)		+= machine_kexec.o relocate_kernel.o crash.o
+19;CRASH_DUMP;obj-$(CONFIG_CRASH_DUMP)	+= crash_dump.o
+20;IA64_UNCACHED_ALLOCATOR;obj-$(CONFIG_IA64_UNCACHED_ALLOCATOR)	+= uncached.o
+21;AUDIT;obj-$(CONFIG_AUDIT)		+= audit.o
+22;PCI_MSI;obj-$(CONFIG_PCI_MSI)		+= msi_ia64.o
+24;IA64_MC_ERR_INJECT;obj-$(CONFIG_IA64_MC_ERR_INJECT)+= err_inject.o
+25;STACKTRACE;obj-$(CONFIG_STACKTRACE)	+= stacktrace.o
+26;PARAVIRT;obj-$(CONFIG_PARAVIRT)		+= paravirt.o paravirtentry.o 				   paravirt_patch.o
+27;IA64_ESI;obj-$(CONFIG_IA64_ESI)		+= esi.o
+28;IA64_ESI;ifneq ($(CONFIG_IA64_ESI),)
+31;INTEL_IOMMU;obj-$(CONFIG_INTEL_IOMMU)	+= pci-dma.o
+32;SWIOTLB;obj-$(CONFIG_SWIOTLB)		+= pci-swiotlb.o
+33;BINFMT_ELF;obj-$(CONFIG_BINFMT_ELF)	+= elfcore.o

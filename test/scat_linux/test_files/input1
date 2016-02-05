@@ -1,0 +1,14 @@
+//
+CONFIG_FOO//cde///CONFIG_BAR
+///xxx
+abc//cde///xyz///ttt
+abc
+abc//cde
+///abc///cde
+abc/ /cde
+  abc // cde
+// /
+//CONFIG_FOO / xyz / CONFIG_ZZZ // ///CONFIG_BAR
+///
+
+   

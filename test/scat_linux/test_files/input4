@@ -1,0 +1,6 @@
+abc "testing # CONFIG_FOO" # This is a comment
+"testing # CONFIG_FOO_MODULE" abc 
+# "testing a "string"
+
+"testing #"
+"testing \n"

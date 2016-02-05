@@ -1,0 +1,4 @@
+config FOO
+  prompt "FOO \ # Will this be ignored???
+          long (# after long, this should be preserved), \
+          str"

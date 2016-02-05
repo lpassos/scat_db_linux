@@ -1,0 +1,2 @@
+4;PRINTK;depends on PRINTK
+5;DEBUG_FS;depends on DEBUG_FS

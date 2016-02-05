@@ -1,0 +1,7 @@
+config DEBUG_LL_INCLUDE
+	string
+	default "debug/icedcc.S" if DEBUG_ICEDCC
+	default "debug/imx.S" if DEBUG_IMX1_UART || \
+				 DEBUG_IMX25_UART || \
+				 DEBUG_IMX21_IMX27_UART 
+	default "debug/highbank.S" if DEBUG_HIGHBANK_UART

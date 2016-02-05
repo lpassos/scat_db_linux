@@ -1,0 +1,9 @@
+config MAGIC_SYSRQ
+	bool "Magic SysRq key"
+	depends on MCONSOLE
+	---help---
+	If you say Y here, you will have some control over the system even
+	if the system crashes for example during kernel debugging (e.g., you
+	will be able to flush the buffer cache to disk, reboot the system
+	immediately or dump some status information). A key for each of the
+	possible requests is provided.

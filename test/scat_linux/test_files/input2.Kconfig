@@ -1,0 +1,12 @@
+config FOO
+  prompt "FOO"
+  bool
+  
+config BAR
+  prompt "BAR"
+  bool
+  
+config ZZZ
+  bool "ZZZ"
+  
+comment "This is just a test"  # This comment should be ignored

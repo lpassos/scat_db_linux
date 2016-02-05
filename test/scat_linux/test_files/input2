@@ -1,0 +1,22 @@
+abc CONFIG_FOO # CONFIG_FOO_MODULE
+# xxx
+abc cde # xyz # ttt
+abc
+abc # cde
+# abc # cde
+abc #  #cde
+  abc # cde
+# #
+##
+
+    
+            
+abc cde #xyz
+abc cde # xyz
+#xxx
+abc cde#xyz#ttt
+abc
+abc #  #cde
+  abc # cde
+abc                        # CONFIG_BAR
+abc                                              

@@ -1,0 +1,11 @@
+config FOO
+  prompt "FOO feature"
+
+config BAR
+  prompt "BAR feature"
+  bool
+
+config ZZZ
+  bool 
+  depends on FOO && \
+             BAR

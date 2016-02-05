@@ -1,0 +1,5 @@
+config FOO
+  prompt "FOO feature"
+
+comment "This is a multiline string, but not written as such.
+         Let us see how the cleaner performs"

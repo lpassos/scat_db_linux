@@ -1,0 +1,4 @@
+abc "testing # CONFIG_FOO" 
+"testing # CONFIG_FOO_MODULE" abc 
+"testing #"
+"testing \n"

@@ -1,0 +1,9 @@
+config NET
+	bool "Networking support"
+	help
+	For a general introduction to Linux networking, it is highly
+	recommended to read the NET-HOWTO, available from
+	<http://www.tldp.org/docs.html#howto>.
+
+
+source "fs/Kconfig.binfmt"

@@ -1,0 +1,9 @@
+//
+CONFIG_FOO//cde
+abc//cde
+abc
+abc//cde
+abc/ /cde
+  abc // cde
+// /
+//CONFIG_FOO / xyz / CONFIG_ZZZ // 
