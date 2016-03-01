@@ -7,7 +7,7 @@
 ---
 # About
 
-scat_db_linux is a program to parse commit patches from the Linux kernel commit history, collecting and storing metadata in a PostgreSQL database. The metadata is primarly target towards querying feature scattering over time, but it may also serve other purposes (e.g., studying subsustem size, features per subsystem, etc).
+scat_db_linux is a program to parse commit patches from the Linux kernel commit history, collecting and storing metadata in a PostgreSQL database. The metadata is primarly targeted towards querying feature scattering over time, but it may also serve other purposes (e.g., studying subsystem size, features per subsystem, etc).
 
 ---
 # Migration to GitHub
